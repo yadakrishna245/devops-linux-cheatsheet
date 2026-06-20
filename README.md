@@ -193,6 +193,7 @@ echo "server:/shared /mnt/nfs nfs defaults 0 0" >> /etc/fstab
 ip addr show
 ip route show
 ss -tulnp                                      # Listening ports
+nethogs eth0                                   # Bandwidth per process (real-time)
 nmcli con show
 nmcli con mod eth0 ipv4.addresses 192.168.1.100/24
 nmcli con up eth0
