@@ -518,6 +518,8 @@ terraform apply tfplan
 terraform destroy
 terraform state list
 terraform state show aws_instance.web
+terraform state mv aws_instance.old aws_instance.new
+terraform state rm aws_instance.deprecated
 terraform import aws_instance.web i-1234567890abcdef0
 terraform fmt -recursive
 terraform validate
