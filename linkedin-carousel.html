@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #1a1a1a; padding: 40px; display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+.slide { width: 1080px; height: 1080px; padding: 80px; display: flex; flex-direction: column; justify-content: center; border-radius: 20px; position: relative; overflow: hidden; }
+.slide::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 70%, rgba(0,210,130,0.1) 0%, transparent 50%); }
+
+/* Slide 1 - Cover */
+.s1 { background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); border: 1px solid #30363d; }
+.s1 h1 { font-size: 52px; color: #fff; margin-bottom: 20px; line-height: 1.2; }
+.s1 .accent { color: #58a6ff; }
+.s1 .subtitle { font-size: 28px; color: #8b949e; margin-bottom: 50px; }
+.s1 .stats { display: flex; gap: 40px; margin-top: 40px; }
+.s1 .stat { text-align: center; }
+.s1 .stat-num { font-size: 48px; font-weight: 800; color: #58a6ff; }
+.s1 .stat-label { font-size: 18px; color: #8b949e; margin-top: 5px; }
+.s1 .author { position: absolute; bottom: 80px; left: 80px; display: flex; align-items: center; gap: 20px; }
+.s1 .author-name { font-size: 24px; color: #fff; }
+.s1 .author-role { font-size: 18px; color: #8b949e; }
+.s1 .badge { background: #238636; color: #fff; padding: 8px 20px; border-radius: 20px; font-size: 16px; position: absolute; top: 80px; right: 80px; }
+
+/* Slide 2 - What's Inside */
+.s2 { background: linear-gradient(135deg, #0d1117 0%, #1c1f26 100%); border: 1px solid #30363d; }
+.s2 h2 { font-size: 44px; color: #fff; margin-bottom: 50px; }
+.s2 .item { display: flex; align-items: center; gap: 24px; margin-bottom: 35px; padding: 24px 30px; background: rgba(255,255,255,0.03); border: 1px solid #30363d; border-radius: 16px; }
+.s2 .icon { font-size: 40px; width: 60px; text-align: center; }
+.s2 .item-title { font-size: 24px; color: #fff; font-weight: 600; }
+.s2 .item-desc { font-size: 18px; color: #8b949e; margin-top: 4px; }
+
+/* Slide 3 - Topics */
+.s3 { background: linear-gradient(135deg, #0d1117 0%, #1c1f26 100%); border: 1px solid #30363d; }
+.s3 h2 { font-size: 44px; color: #fff; margin-bottom: 50px; }
+.s3 .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.s3 .tag { padding: 20px 28px; background: rgba(88,166,255,0.08); border: 1px solid rgba(88,166,255,0.3); border-radius: 12px; font-size: 22px; color: #58a6ff; text-align: center; font-weight: 600; }
+
+/* Slide 4 - CTA */
+.s4 { background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); border: 1px solid #30363d; text-align: center; }
+.s4 h2 { font-size: 48px; color: #fff; margin-bottom: 30px; }
+.s4 .url { font-size: 26px; color: #58a6ff; background: rgba(88,166,255,0.1); padding: 20px 40px; border-radius: 12px; border: 1px solid rgba(88,166,255,0.3); display: inline-block; margin: 30px 0; }
+.s4 .cta { font-size: 28px; color: #8b949e; margin-top: 20px; }
+.s4 .star { font-size: 60px; margin: 30px 0; }
+.s4 .hashtags { font-size: 18px; color: #58a6ff; margin-top: 40px; line-height: 2; }
+
+.slide-num { position: absolute; bottom: 40px; right: 60px; font-size: 20px; color: #484f58; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Cover -->
+<div class="slide s1">
+  <div class="badge">⭐ FREE & Open Source</div>
+  <h1>The Only <span class="accent">DevOps & Linux</span><br>Cheat Sheet You'll Ever Need</h1>
+  <p class="subtitle">Real-world commands from production environments</p>
+  <div class="stats">
+    <div class="stat"><div class="stat-num">4000+</div><div class="stat-label">Servers Managed</div></div>
+    <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num">200+</div><div class="stat-label">Interview Q&A</div></div>
+    <div class="stat"><div class="stat-num">5</div><div class="stat-label">Guides Included</div></div>
+  </div>
+  <div class="author">
+    <div>
+      <div class="author-name">Krishna Yada</div>
+      <div class="author-role">Senior System Administrator & DevOps Engineer</div>
+    </div>
+  </div>
+  <div class="slide-num">1/4</div>
+</div>
+
+<!-- SLIDE 2: What's Inside -->
+<div class="slide s2">
+  <h2>📂 What's Inside</h2>
+  <div class="item"><div class="icon">🚀</div><div><div class="item-title">DevOps Cheat Sheet</div><div class="item-desc">Docker, K8s, AWS CLI, Terraform, Ansible, Jenkins, Git</div></div></div>
+  <div class="item"><div class="icon">📝</div><div><div class="item-title">200 Linux Interview Q&A</div><div class="item-desc">L2/L3 level — scenario-based with real answers</div></div></div>
+  <div class="item"><div class="icon">📖</div><div><div class="item-title">Linux Admin Reference</div><div class="item-desc">Users, LVM, Network, Boot, Security — complete guide</div></div></div>
+  <div class="item"><div class="icon">🖥️</div><div><div class="item-title">ESXi & KVM Guide</div><div class="item-desc">Blade server install → Advanced administration</div></div></div>
+  <div class="slide-num">2/4</div>
+</div>
+
+<!-- SLIDE 3: Technologies Covered -->
+<div class="slide s3">
+  <h2>🛠️ Technologies Covered</h2>
+  <div class="grid">
+    <div class="tag">🐧 Linux (RHEL/Ubuntu)</div>
+    <div class="tag">🐳 Docker</div>
+    <div class="tag">☸️ Kubernetes</div>
+    <div class="tag">☁️ AWS</div>
+    <div class="tag">🏗️ Terraform</div>
+    <div class="tag">📦 Ansible</div>
+    <div class="tag">🔄 Jenkins CI/CD</div>
+    <div class="tag">🔀 Git & GitHub</div>
+    <div class="tag">🖥️ VMware ESXi</div>
+    <div class="tag">💻 KVM / QEMU</div>
+    <div class="tag">🔐 Security & SELinux</div>
+    <div class="tag">📊 Monitoring & Logs</div>
+  </div>
+  <div class="slide-num">3/4</div>
+</div>
+
+<!-- SLIDE 4: CTA -->
+<div class="slide s4">
+  <div class="star">⭐</div>
+  <h2>100% Free. No Signup.</h2>
+  <div class="url">github.com/yadakrishna245/devops-linux-cheatsheet</div>
+  <p class="cta">Star ⭐ it if useful &nbsp;|&nbsp; Repost to help others 🙌</p>
+  <p class="hashtags">#DevOps #Linux #AWS #Docker #Kubernetes #SRE #VMware #KVM<br>#InterviewPrep #OpenToWork #SystemAdmin #CloudComputing</p>
+  <div class="slide-num">4/4</div>
+</div>
+
+</body>
+</html>
