@@ -194,6 +194,7 @@ nmcli con up eth0
 
 # DNS
 dig google.com
+dig +trace google.com                          # Full resolution path
 nslookup google.com
 cat /etc/resolv.conf
 
