@@ -294,6 +294,9 @@ grep -i "killed process" /var/log/messages
 ### Container Lifecycle
 
 ```bash
+# Quick container health check
+docker inspect --format='{{.State.Health.Status}}' <container>
+
 # Run containers
 docker run -d --name myapp -p 8080:80 --restart=always nginx:latest
 docker run -d --name db -e MYSQL_ROOT_PASSWORD=secret -v dbdata:/var/lib/mysql mysql:8
