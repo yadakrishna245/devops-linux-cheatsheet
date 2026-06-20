@@ -22,6 +22,7 @@
 |----------|-------------|
 | [📝 200 Linux Interview Q&A (L2/L3)](LINUX-INTERVIEW-QA.md) | Real interview questions with detailed answers |
 | [📖 Linux Admin Reference Guide](LINUX-ADMIN-REFERENCE.md) | Complete admin reference — Users, LVM, Network, Services, Security |
+| [🖥️ ESXi & KVM Complete Guide](ESXI-KVM-GUIDE.md) | Beginner to Advanced — Installation on blade servers, administration, interview Q&A |
 
 </div>
 
