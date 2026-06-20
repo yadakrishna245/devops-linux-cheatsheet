@@ -224,6 +224,7 @@ nmcli con add type ethernet con-name bond0-slave2 ifname eth1 master bond0
 # Service management
 systemctl start|stop|restart|status <service>
 systemctl enable --now <service>
+systemctl list-timers --all                    # Show all timers
 systemctl disable <service>
 systemctl list-units --type=service --state=running
 systemctl list-unit-files | grep enabled
