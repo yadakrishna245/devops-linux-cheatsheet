@@ -291,6 +291,11 @@ lsof -u username                              # Files opened by user
 # OOM killer check
 dmesg | grep -i "out of memory"
 grep -i "killed process" /var/log/messages
+
+# System load analysis
+uptime                                         # Quick load average check
+cat /proc/loadavg                              # Load avg with process counts
+nproc                                          # Number of CPUs (load avg context)
 ```
 
 ---
