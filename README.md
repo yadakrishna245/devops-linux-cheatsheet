@@ -560,6 +560,13 @@ resource "aws_s3_bucket_versioning" "logs" {
 ### Ad-hoc Commands
 
 ```bash
+# Ansible Vault (encrypt secrets)
+ansible-vault create secrets.yml
+ansible-vault edit secrets.yml
+ansible-vault encrypt vars.yml
+ansible-vault decrypt vars.yml
+ansible-playbook site.yml --ask-vault-pass
+
 ansible all -m ping
 ansible webservers -m shell -a "uptime"
 ansible all -m yum -a "name=httpd state=latest" --become
