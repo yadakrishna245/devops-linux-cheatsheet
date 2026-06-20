@@ -891,6 +891,18 @@ tail -Fn0 "$LOG_FILE" | while read -r line; do
         echo "$line" | mail -s "🚨 CRITICAL: $(hostname)" "$ALERT_EMAIL"
     fi
 done
+## ⏰ Cron & Scheduling
+
+```bash
+# Cron syntax: MIN HOUR DAY MONTH WEEKDAY
+crontab -l                                    # List current user's cron jobs
+crontab -e                                    # Edit crontab
+0 2 * * 1-5 /path/to/script.sh               # Run at 2AM weekdays only
+*/5 * * * * /path/to/check.sh                 # Every 5 minutes
+0 0 1 * * /path/to/monthly.sh                 # First day of month at midnight
+```
+
+
 ```
 
 ---
