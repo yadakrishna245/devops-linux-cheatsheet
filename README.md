@@ -791,6 +791,10 @@ cat <<EOF > /etc/logrotate.d/myapp
     create 0640 appuser appgroup
 }
 EOF
+
+# Test logrotate config
+logrotate -d /etc/logrotate.d/myapp          # Dry run (debug mode)
+logrotate -f /etc/logrotate.d/myapp          # Force rotation now
 ```
 
 ---
