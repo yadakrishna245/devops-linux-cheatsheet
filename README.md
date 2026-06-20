@@ -475,6 +475,7 @@ aws ec2 authorize-security-group-ingress --group-id sg-xxx --protocol tcp --port
 
 ```bash
 aws s3 ls
+aws s3 ls s3://my-bucket --recursive --human-readable
 aws s3 cp file.txt s3://my-bucket/
 aws s3 sync ./local-dir s3://my-bucket/prefix/
 aws s3 rm s3://my-bucket/prefix/ --recursive
