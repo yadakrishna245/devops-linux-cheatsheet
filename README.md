@@ -709,6 +709,8 @@ pipeline {
 
 ```bash
 # Branch management
+git log --oneline --graph --all --decorate
+git log --author="krishna" --since="1 week ago"
 git checkout -b feature/new-feature
 git branch -d feature/merged-branch
 git branch -a                                  # List all branches
