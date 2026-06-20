@@ -234,6 +234,7 @@ systemctl list-timers --all                    # Show all timers
 systemctl disable <service>
 systemctl list-units --type=service --state=running
 systemctl list-unit-files | grep enabled
+systemctl show <service> -p RestartUSec        # Check restart delay config
 
 # Journald logs
 journalctl -u <service> -f                     # Follow logs
