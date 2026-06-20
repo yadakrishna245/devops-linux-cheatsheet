@@ -433,6 +433,12 @@ kubectl top pods
 kubectl top nodes
 kubectl describe node <node-name> | grep -A5 "Conditions"
 
+# Debug with ephemeral container
+kubectl debug -it <pod-name> --image=busybox --target=<container>
+
+# Copy files from pod
+kubectl cp <pod-name>:/path/to/file ./local-file
+
 # Resource usage
 kubectl get pods --field-selector=status.phase=Failed
 kubectl get pods | grep -v Running
