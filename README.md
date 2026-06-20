@@ -122,6 +122,11 @@ userdel -r username
 ssh-keygen -t ed25519 -C "admin@server"
 ssh-copy-id user@remote-host
 
+# SSH tunneling
+ssh -L 8080:localhost:3306 user@remote       # Local port forward (access remote MySQL on localhost:8080)
+ssh -R 9090:localhost:80 user@remote         # Remote port forward (expose local web to remote)
+ssh -D 1080 user@remote                     # SOCKS proxy (dynamic forward)
+
 # Sudoers (visudo)
 echo "username ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers.d/username
 
