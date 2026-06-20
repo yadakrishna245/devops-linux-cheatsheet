@@ -79,6 +79,8 @@ yum install <package> -y
 yum remove <package>
 yum list installed | grep <package>
 dnf module list
+dnf install dnf-automatic -y                   # Auto security patching
+systemctl enable --now dnf-automatic-install.timer
 
 # Ubuntu/Debian (apt)
 apt update && apt upgrade -y
